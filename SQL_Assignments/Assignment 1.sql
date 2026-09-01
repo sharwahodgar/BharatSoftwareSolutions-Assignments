@@ -24,22 +24,25 @@ VALUES
 
 
 
----- Assignment 1---
--- Q-1. Write an SQL query to print the FIRST_NAME from Worker table after replacing 'a' with 'A'.
+-- Assignment 1
 
-SELECT REPLACE(FIRST_NAME, 'a', 'A') AS FIRST_NAME
+-- Q-1. Write an SQL query to fetch FIRST_NAME from Worker table
+-- using the alias name as <WORKER_NAME>.
+
+SELECT FIRST_NAME AS WORKER_NAME
 FROM Worker;
 
 
--- Q-2. Write an SQL query to print all Worker details ordered by FIRST_NAME Ascending and DEPARTMENT Descending.
+-- Q-2. Write an SQL query to fetch unique values of DEPARTMENT
+-- from Worker table.
+
+SELECT DISTINCT DEPARTMENT
+FROM Worker;
+
+
+-- Q-3. Write an SQL query to show the last 5 records from a table.
 
 SELECT *
 FROM Worker
-ORDER BY FIRST_NAME ASC, DEPARTMENT DESC;
-
-
--- Q-3. Write an SQL query to fetch the names of workers who earn the highest salary.
-
-SELECT FIRST_NAME, LAST_NAME
-FROM Worker
-WHERE SALARY = (SELECT MAX(SALARY) FROM Worker);
+ORDER BY WORKER_ID DESC
+LIMIT 5;
