@@ -4,11 +4,11 @@ USE BSS_SQL_Assignments;
 
 select substring(FIRST_NAME, 1, 3) as FIRST_NAME FROM Worker; 
 
---Q-2. Write an SQL query to find the position of the alphabet ('a') in the first name column 'Amitabh' from Worker table.
+--Q-2. Write an SQL query to find the position of the alphabet ('a') in the first name column 'Mahika' from Worker table.
 
 SELECT INSTR(FIRST_NAME, 'a') AS Position
 FROM Worker
-WHERE FIRST_NAME = 'Amitabh';
+WHERE FIRST_NAME = 'Mahika';
 
 -- Q-3. Write an SQL query to print the name of employees having the highest salary in each department.
 
